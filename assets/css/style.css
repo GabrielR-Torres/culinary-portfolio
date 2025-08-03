@@ -526,6 +526,60 @@ word-spacing: 0.1em;
     color: var(--gray);
 }
 
+/* Dropdown effect for culinary specialties */
+.stat-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    color: var(--gold-primary);
+    margin-top: var(--space-xs);
+    transition: transform var(--transition-normal);
+}
+
+.stat-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.specialties-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: var(--space-sm);
+    background-color: var(--black-secondary);
+    border: 1px solid var(--gold-muted);
+    border-radius: var(--border-radius);
+    padding: var(--space-xs) 0;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.stat-dropdown:hover .specialties-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--gold-primary);
+    padding: 0.4rem 1rem;
+    text-align: center;
+    transition: background-color var(--transition-normal);
+}
+
+.dropdown-item:hover {
+    background-color: var(--black-tertiary);
+    border-radius: calc(var(--border-radius) / 2);
+}
+
 /* =====================================================
    7. GALLERY SECTION
    ===================================================== */
